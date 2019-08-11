@@ -6,18 +6,31 @@
  * and open the template in the editor.
  */
 namespace ANNPhp\Domain\Service;
+use ANNPhp\Domain\Entity\Neuron;
 /**
  * Description of GrnerateOutput
  *
  * @author alma
  */
-class GrnerateOutput
+class OutputService
 {
     protected $neuron;
     protected $inputVector;
     
-    public function __construct($neuron, $inputVector)
+    public function __construct(Neuron $neuron, $inputVector)
     {
-        
+        $this->neuron = $neuron;
+        $this->inputVector = $inputVector;
+    }
+    
+    public function getOutput()
+    {
+        $sum = 0;
+        foreach ($this->neuron->getWeightVector() as $key => $value) {
+            if (key_exists($key, $this->inputVector)) {
+                $sum += $this->inputVector * $value;
+            }
+        }
+        return $this->neuron->getActivationFunction()->activation($sum);
     }
 }
