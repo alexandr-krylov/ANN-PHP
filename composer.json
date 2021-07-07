@@ -6,6 +6,8 @@
             "email": "alexandr.krylov@gmail.com"
         }
     ],
+    "description": "artifical neuronal network",
+    "license": "BSD-4-Clause",
     "autoload": {
         "psr-4": {
             "ANNPhp\\": ["src/"]
