@@ -3,3 +3,5 @@ services:
   app:
     build:
       context: ./docker/php/
+    volumes: 
+      - .:/var/www/ann-php
