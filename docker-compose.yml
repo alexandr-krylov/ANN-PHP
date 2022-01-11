@@ -3,5 +3,7 @@ services:
   app:
     build:
       context: ./docker/php/
+    working_dir: /var/www/ann-php
+    container_name: ann_app
     volumes: 
       - .:/var/www/ann-php
