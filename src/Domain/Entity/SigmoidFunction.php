@@ -17,6 +17,6 @@ class SigmoidFunction implements ActivationFunctionInterface
 {
     public function activation($sigma) 
     {
-        return 1 / (1 + exp( - $sigma));
+        return 1 / (1 + exp(- $sigma));
     }
 }
