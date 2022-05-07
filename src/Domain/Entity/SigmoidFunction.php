@@ -15,7 +15,7 @@ namespace ANNPhp\Domain\Entity;
  */
 class SigmoidFunction implements ActivationFunctionInterface
 {
-    public function activation($sigma) 
+    public function activation($sigma)
     {
         return 1 / (1 + exp(- $sigma));
     }

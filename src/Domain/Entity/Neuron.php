@@ -17,31 +17,26 @@ class Neuron extends AbstractEntity
 {
     protected $weightVector = [];
     protected $activationFunction;
-    
-    function __construct(
-        $weightVector, ActivationFunctionInterface $activationFunction
+    public function __construct(
+        $weightVector,
+        ActivationFunctionInterface $activationFunction
     ) {
         $this->weightVector = $weightVector;
         $this->activationFunction = $activationFunction;
     }
-
-    
-    function getWeightVector()
+    public function getWeightVector()
     {
         return $this->weightVector;
     }
-
-    function getActivationFunction()
+    public function getActivationFunction()
     {
         return $this->activationFunction;
     }
-
-    function setWeightVector($weightVector)
+    public function setWeightVector($weightVector)
     {
         $this->weightVector = $weightVector;
     }
-
-    function setActivationFunction($activationFunction)
+    public function setActivationFunction($activationFunction)
     {
         $this->activationFunction = $activationFunction;
     }

@@ -5,8 +5,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 namespace ANNPhp\Domain\Service;
+
 use ANNPhp\Domain\Entity\Neuron;
+
 /**
  * Description of GrnerateOutput
  *
@@ -16,13 +19,11 @@ class OutputService
 {
     protected $neuron;
     protected $inputVector;
-    
     public function __construct(Neuron $neuron, $inputVector)
     {
         $this->neuron = $neuron;
         $this->inputVector = $inputVector;
     }
-    
     public function getOutput()
     {
         $sum = 0;
