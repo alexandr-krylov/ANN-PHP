@@ -19,9 +19,9 @@
         "squizlabs/php_codesniffer": "3.*"
     },
     "scripts": {
-        "test": "./vendor/bin/phpunit",
+        "test": "./vendor/bin/phpunit ./tests/*",
         "code-sniffer": [
-            "./vendor/bin/phpcs --colors --standard=PSR12 ./src"
+            "./vendor/bin/phpcs --colors --standard=PSR12 ./src ./tests"
         ]
     }
 }
