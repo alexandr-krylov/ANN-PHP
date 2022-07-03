@@ -4,10 +4,13 @@ namespace Tests;
 
 use PHPUnit\Framework\TestCase;
 
-class TestOutputService extends TestCase
+class OutputServiceTest extends TestCase
 {
     public function providerGetOutput()
     {
+        return [
+
+        ];
     }
 
     /**
@@ -16,7 +19,7 @@ class TestOutputService extends TestCase
      * @return void
      * @dataProvider providerGetOutput
      */
-    public function testGetOutput($input, $output)
+    public function testGetOutput($input, $output, $weight)
     {
     }
 }

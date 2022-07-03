@@ -8,7 +8,7 @@ use ANNPhp\Domain\Entity\ActivationFunctionInterface;
 use PHPUnit\Framework\TestCase;
 use ANNPhp\Domain\Entity\TanhFunction;
 
-final class TestTanhFunction extends TestCase
+final class TanhFunctionTest extends TestCase
 {
     public function providerTanh()
     {
