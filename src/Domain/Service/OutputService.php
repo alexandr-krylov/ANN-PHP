@@ -29,7 +29,7 @@ class OutputService
         $sum = 0;
         foreach ($this->neuron->getWeightVector() as $key => $value) {
             if (key_exists($key, $this->inputVector)) {
-                $sum += $this->inputVector * $value;
+                $sum += $this->inputVector[$key] * $value;
             }
         }
         return $this->neuron->getActivationFunction()->activation($sum);
