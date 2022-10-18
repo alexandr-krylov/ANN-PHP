@@ -8,6 +8,5 @@ class Network extends AbstractEntity
 {
     public function __construct($netMatrix)
     {
-        
     }
 }

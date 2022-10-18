@@ -6,7 +6,6 @@ use PHPUnit\Framework\TestCase;
 use ANNPhp\Domain\Entity\{Neuron, TanhFunction};
 use ANNPhp\Domain\Service\OutputService;
 
-
 class OutputServiceTest extends TestCase
 {
     public function providerGetOutput()
@@ -28,7 +27,7 @@ class OutputServiceTest extends TestCase
      */
     public function testGetOutput($input, $output, $weight)
     {
-        $neuron = new Neuron($weight, new TanhFunction);
+        $neuron = new Neuron($weight, new TanhFunction());
         $outputService = new OutputService($neuron, $input);
         $this->assertEqualsWithDelta($output, $outputService->getOutput(), 0.0001);
     }
